@@ -1,17 +1,17 @@
-$color-main: #FBD85D;
+$color-main: #fbd85d;
 $color-background: #f0f0f0;
 
 body {
   background: $color-background;
 }
 
-h5{
+h5 {
   margin: 0;
   font-size: 1rem;
   color: $color-main;
 }
 
-h4{
+h4 {
   margin: 10px 0px;
 }
 
@@ -30,6 +30,7 @@ h4{
 }
 
 .movie-card {
+  position: relative;
   border: 1px solid #ddd;
   border-radius: 5px;
   margin: 0px 10px 0px 10px;
@@ -43,10 +44,33 @@ h4{
 }
 .movie-card__body {
   padding: 10px;
+  position: relative;
 }
 .movie-card__title {
   font-size: 1.2rem;
   margin: 5px 0px;
+}
+
+.movie-card__title__label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  margin: 0;
+  width: 0;
+  height: 0;
+  border-right: 30px solid $color-main;
+  border-top: 30px solid transparent;
+  border-left: 30px solid transparent;
+  border-bottom: 30px solid $color-main;
+}
+
+.label-icon {
+  position: relative;
+  right: -2px;
+  top: -6px;
+  font-size: 2rem;
+  color: #fff;
 }
 
 @media (max-width: 990px) {
