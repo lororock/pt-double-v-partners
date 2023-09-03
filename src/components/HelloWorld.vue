@@ -9,6 +9,8 @@ defineProps({
 const movieData = ref(null);
 const moviesData = ref(null);
 const genders = ref(null);
+const isModalOpen = ref(false);
+const selectedMovie = ref(null);
 
 onMounted(async () => {
   try {
@@ -19,6 +21,16 @@ onMounted(async () => {
     console.error("Error al obtener los datos de la película:", error);
   }
 });
+
+const openModal = (movie) => {
+  selectedMovie.value = movie;
+  isModalOpen.value = true;
+  console.log("click", selectedMovie.value);
+};
+const closeModal = () => {
+  isModalOpen.value = false;
+  console.log("click", isModalOpen.value);
+};
 
 const getGenres = (genreIds) => {
   const genres = genreIds.map((genreId) => {
@@ -38,7 +50,7 @@ const getGenres = (genreIds) => {
       <!-- Verifica si moviesData y moviesData.results no son nulos o indefinidos -->
       <div v-if="moviesData && moviesData.results">
         <!-- Contenido que se mostrará si moviesData.results existe -->
-        <div class="movie-card-container">
+        <div class="movie-card-container" >
           <div
             class="movie-card"
             v-for="movie in moviesData.results"
@@ -48,6 +60,7 @@ const getGenres = (genreIds) => {
               :src="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
               :alt="movie.original_title"
               class="movie-card__img"
+              @click="openModal(movie)"
             />
             <div>
               <div class="movie-card__body">
@@ -65,6 +78,13 @@ const getGenres = (genreIds) => {
       <div v-else>
         <!-- Contenido que se mostrará si moviesData.results es nulo o indefinido -->
         <p>No se encontraron resultados de películas.</p>
+      </div>
+      <div class="modal" v-if="isModalOpen">
+        <div class="modal-content">
+          <span @click="closeModal()" class="close">&times;</span>
+          <h2>{{ selectedMovie ? selectedMovie.original_title : "no funciono" }}</h2>
+          <p>Contenido del modal...</p>
+        </div>
       </div>
     </div>
   </div>
