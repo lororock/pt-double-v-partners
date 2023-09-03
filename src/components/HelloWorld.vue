@@ -45,7 +45,8 @@ const getGenres = (genreIds) => {
             />
             <div class="movie-card__body">
               <h2 class="movie-card__title">{{ movie.original_title }}</h2>
-              <h5>Idioma {{ getGenres(movie.genre_ids) }}</h5>
+              <h5>{{ getGenres(movie.genre_ids) }}</h5>
+              <h4> ❤️ {{ movie.vote_average }}</h4>
             </div>
           </div>
         </div>
