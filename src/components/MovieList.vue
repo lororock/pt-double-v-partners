@@ -25,7 +25,7 @@ onMounted(async () => {
 const openModal = (movie) => {
   selectedMovie.value = movie;
   isModalOpen.value = true;
-  console.log("click", selectedMovie.value);
+  console.log("click", selectedMovie.value.backdrop_path);
 };
 const closeModal = () => {
   isModalOpen.value = false;
@@ -50,7 +50,7 @@ const getGenres = (genreIds) => {
       <!-- Verifica si moviesData y moviesData.results no son nulos o indefinidos -->
       <div v-if="moviesData && moviesData.results">
         <!-- Contenido que se mostrará si moviesData.results existe -->
-        <div class="movie-card-container" >
+        <div class="movie-card-container">
           <div
             class="movie-card"
             v-for="movie in moviesData.results"
@@ -82,8 +82,24 @@ const getGenres = (genreIds) => {
       <div class="modal" v-if="isModalOpen">
         <div class="modal-content">
           <span @click="closeModal()" class="close">&times;</span>
-          <h2>{{ selectedMovie ? selectedMovie.original_title : "no funciono" }}</h2>
-          <p>Contenido del modal...</p>
+          <div class="modal-content__data">
+            <div class="modal-content__left">
+              <img
+                :src="
+                  'https://image.tmdb.org/t/p/w500' + selectedMovie.poster_path
+                "
+                class="movie-card__img"
+              />
+            </div>
+            <div class="modal-content__right">
+              <h2>
+                {{
+                  selectedMovie ? selectedMovie.original_title : "no funciono"
+                }}
+                <p>Contenido del modal...</p>
+              </h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
