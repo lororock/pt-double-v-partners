@@ -1,11 +1,11 @@
-# proyect need
+# proyect need env
 
-add a file called `credentials.js` in the services folder, there you have to create 2 variables with the names `apiKey`,`bearerToken` and export them. example:
-export const apiKey = '123';
-export const bearerToken = '456';
+I will add file .env in the main folder
+VITE_APP_API_KEY= your key
+VITE_APP_BEARER_TOKEN= your token
 
 these are obtained at https://developer.themoviedb.org/docs/getting-started
-you create your profile and you will get them
+create your profile and you will get them
 
 # Vue 3 + Vite
 
