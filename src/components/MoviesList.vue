@@ -1,9 +1,8 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { getMovie, getMovies, getGenders } from "../services/getData.js";
+import { getMovies, getGenders } from "../services/getData.js";
 import Modal from "./Modal.vue";
 
-const movieData = ref(null);
 const moviesData = ref(null);
 const genders = ref(null);
 const isModalOpen = ref(false);
@@ -11,7 +10,6 @@ const selectedMovie = ref(null);
 
 onMounted(async () => {
   try {
-    movieData.value = await getMovie();
     moviesData.value = await getMovies();
     genders.value = await getGenders();
   } catch (error) {
