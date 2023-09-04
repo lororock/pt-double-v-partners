@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { getMovie, getMovies, getGenders } from "../services/getData.js";
+import Modal from "./Modal.vue";
 
 defineProps({
   msg: String,
@@ -80,72 +81,12 @@ const getGenres = (genreIds) => {
         <p>No se encontraron resultados de películas.</p>
       </div>
       <div class="modal" v-if="isModalOpen">
-        <div class="modal-content">
-          <span @click="closeModal()" class="close">&times;</span>
-          <div class="modal-content__data">
-            <div class="modal-content__left">
-              <img
-                :src="
-                  'https://image.tmdb.org/t/p/w500' + selectedMovie.poster_path
-                "
-                class="movie-card__img"
-              />
-              <img
-                :src="
-                  'https://image.tmdb.org/t/p/w500' + selectedMovie.backdrop_path
-                "
-                class="movie-card__img2"
-              />
-            </div>
-            <div class="modal-content__right">
-              <div class="content-right__top">
-                <div class="content-right__info">
-                <h2>
-                  {{
-                    selectedMovie ? selectedMovie.original_title : "no funciono"
-                  }}
-                </h2>
-                <div class="right-info__movie">
-                  <b>{{ getGenres(selectedMovie.genre_ids) }}</b>
-                  <div>
-                    <p>{{ selectedMovie.adult ? "M18" : "PG-13" }}</p>
-                    <p>{{ selectedMovie.release_date }}</p>
-                  </div>
-                </div>
-                <div class="right-info__details">
-                  <div>
-                    <div class="detail">
-                      ❤️ {{ selectedMovie.vote_average }}
-                      <h3>rating</h3>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="detail">
-                      👎 {{ Math.floor(Math.random() * (100 - 40 + 1)) + 40 }}
-                      <h3>score</h3>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="detail">
-                      🏆 {{ Math.floor(Math.random() * (20 - 3 + 1)) + 3 }}
-                      <h3>awards</h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p>
-                {{ selectedMovie.overview }}
-              </p>
-              <p class="full-movie">FULL MOVIE PROFILE →</p>
-              </div>
-              
-              <div class="btns">
-                <div class="btnl">Watch Trailer ▶</div>
-                <div class="btnr">To Wathclist ⭐</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Modal
+          :isModalOpen="isModalOpen"
+          :selectedMovie="selectedMovie"
+          :getGenres="getGenres"
+          :closeModal="closeModal"
+        />
       </div>
     </div>
   </div>

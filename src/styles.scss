@@ -247,20 +247,20 @@ p {
     width: 70%;
   }
 
-  .modal-content__right{
+  .modal-content__right {
     width: 100%;
     text-align: center;
   }
-  .content-right__top{
+  .content-right__top {
     padding: 0 5%;
   }
-  .content-right__info{
+  .content-right__info {
     padding-top: 1%;
     right: 0;
     bottom: 59px;
   }
 
-  .full-movie{
+  .full-movie {
     margin: 5% 0;
   }
   .modal-content__left {
@@ -274,12 +274,14 @@ p {
       visibility: visible;
     }
   }
-  
 }
 
 @media (max-width: 768px) {
   .modal-content {
     width: 90%;
     left: 5%;
+  }
+  .modal-content__left {
+    height: 242px;
   }
 }

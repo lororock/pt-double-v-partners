@@ -279,6 +279,9 @@ p {
     width: 90%;
     left: 5%;
   }
+  .modal-content__left {
+    height: 242px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
