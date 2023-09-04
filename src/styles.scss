@@ -1,4 +1,5 @@
-$color-main: #fbd85d;
+$color-main: #FFC436;
+$color-second: #383838;
 $color-background: #f0f0f0;
 $color-default: #fff;
 $color-info: #64ccc5;
@@ -225,11 +226,11 @@ p {
     transition: background-color 0.3s ease;
   }
   .btnl {
-    background-color: #fbd85d;
+    background-color: $color-main;
     color: $color-default;
   }
   .btnr {
-    background-color: #383838;
+    background-color: $color-second;
   }
 }
 .close {
@@ -295,7 +296,7 @@ p {
 .footer {
   width: 96%;
   background-color: $color-default;
-  color: #383838;
+  color: $color-second;
   padding: 20px 0;
   display: flex;
   justify-content: space-between;
@@ -373,9 +374,82 @@ p {
 
 // header
 
-.img-header{
+.img-header {
   height: 660px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.header-navbar {
+  display: flex;
+  color: $color-default;
+  justify-content: space-between;
+  padding: 1% 4%;
+}
+
+.header-navbar__logo {
+  background-color: $color-main;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-data__list {
+  list-style-type: none;
+  display: flex;
+  li {
+    padding: 0 10px;
+  }
+}
+
+.data-select {
+  color: $color-main;
+}
+
+.header-navbar__img {
+  img {
+    height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.header-title {
+  color: $color-default;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 13%;
+  margin-right: 150px;
+  flex-direction: column;
+  margin-top: 6%;
+  h1 {
+    margin: 0;
+  }
+}
+
+.header-genre {
+  margin-bottom: 4%;
+  display: flex;
+  div {
+    padding: 0 10px;
+  }
+}
+.header-btn {
+  display: flex;
+  background-color: $color-main;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease;
+  display: inline;
+  border-radius: 25px;
+  padding: 12px;
+}
+.header-info{
+  margin-top: 7%;
+  h2{
+    margin: 0;
+    color: #fbd85d;
+  }
 }

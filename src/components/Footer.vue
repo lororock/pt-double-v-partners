@@ -15,8 +15,7 @@
           <!-- Enlaces de navegación del footer -->
           <ul>
             <li>
-              <a href="https://twitter.com/l0r0r0ck"
-              target="_blank"
+              <a href="https://twitter.com/l0r0r0ck" target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -46,7 +45,9 @@
               ></a>
             </li>
             <li>
-              <a href="https://www.instagram.com/doublevpartners/" target="_blank"
+              <a
+                href="https://www.instagram.com/doublevpartners/"
+                target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"

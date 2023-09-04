@@ -1,6 +1,6 @@
 import axiosInstance from "./axiosIntance";
 
-const movieId = "372058";
+const movieId = "155";
 
 export const getMovie = async () => {
   try {

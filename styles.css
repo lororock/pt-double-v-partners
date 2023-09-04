@@ -7,7 +7,7 @@ body {
 h5 {
   margin: 0;
   font-size: 1rem;
-  color: #fbd85d;
+  color: #FFC436;
 }
 
 h4 {
@@ -70,10 +70,10 @@ p {
   margin: 0;
   width: 0;
   height: 0;
-  border-right: 30px solid #fbd85d;
+  border-right: 30px solid #FFC436;
   border-top: 30px solid transparent;
   border-left: 30px solid transparent;
-  border-bottom: 30px solid #fbd85d;
+  border-bottom: 30px solid #FFC436;
 }
 
 .label-icon {
@@ -224,7 +224,7 @@ p {
   transition: background-color 0.3s ease;
 }
 .btns .btnl {
-  background-color: #fbd85d;
+  background-color: #FFC436;
   color: #fff;
 }
 .btns .btnr {
@@ -338,7 +338,7 @@ p {
   text-align: center;
   padding: 10px 0;
   background-color: #fff;
-  color: #fbd85d;
+  color: #FFC436;
 }
 
 @media (max-width: 768px) {
@@ -359,7 +359,80 @@ p {
   height: 660px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: top;
+  background-position: center;
+}
+
+.header-navbar {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+  padding: 1% 4%;
+}
+
+.header-navbar__logo {
+  background-color: #FFC436;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-data__list {
+  list-style-type: none;
+  display: flex;
+}
+.navbar-data__list li {
+  padding: 0 10px;
+}
+
+.data-select {
+  color: #FFC436;
+}
+
+.header-navbar__img img {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.header-title {
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 13%;
+  margin-right: 150px;
+  flex-direction: column;
+  margin-top: 6%;
+}
+.header-title h1 {
+  margin: 0;
+}
+
+.header-genre {
+  margin-bottom: 4%;
+  display: flex;
+}
+.header-genre div {
+  padding: 0 10px;
+}
+
+.header-btn {
+  display: flex;
+  background-color: #FFC436;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: background-color 0.3s ease;
+  display: inline;
+  border-radius: 25px;
+  padding: 12px;
+}
+
+.header-info {
+  margin-top: 7%;
+}
+.header-info h2 {
+  margin: 0;
+  color: #fbd85d;
 }
 
 /*# sourceMappingURL=styles.css.map */
