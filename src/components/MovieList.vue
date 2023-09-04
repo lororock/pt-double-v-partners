@@ -3,10 +3,6 @@ import { ref, onMounted } from "vue";
 import { getMovie, getMovies, getGenders } from "../services/getData.js";
 import Modal from "./Modal.vue";
 
-defineProps({
-  msg: String,
-});
-
 const movieData = ref(null);
 const moviesData = ref(null);
 const genders = ref(null);
@@ -46,7 +42,6 @@ const getGenres = (genreIds) => {
 
 <template>
   <div>
-    <h1>{{ msg }}</h1>
     <div class="card">
       <!-- Verifica si moviesData y moviesData.results no son nulos o indefinidos -->
       <div v-if="moviesData && moviesData.results">

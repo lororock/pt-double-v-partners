@@ -1,8 +1,11 @@
 $color-main: #fbd85d;
 $color-background: #f0f0f0;
+$color-default: #fff;
 $color-info: #64ccc5;
 
 body {
+  margin: 0;
+  padding: 0;
   background: $color-background;
 }
 
@@ -39,6 +42,7 @@ p {
 }
 
 .movie-card {
+  background-color: $color-default;
   position: relative;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -79,7 +83,7 @@ p {
   right: -2px;
   top: -6px;
   font-size: 2rem;
-  color: #fff;
+  color: $color-default;
 }
 
 @media (max-width: 990px) {
@@ -115,7 +119,7 @@ p {
   top: 20%;
   width: 50%;
   left: 20%;
-  background-color: #fff;
+  background-color: $color-default;
   border-radius: 5px;
   text-align: center;
   display: inline-block;
@@ -172,7 +176,7 @@ p {
   padding-left: 3%;
   padding-top: 2%;
   margin-top: 3%;
-  background-color: #fff;
+  background-color: $color-default;
   position: relative;
   right: 12%;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px -5px 10px rgba(0, 0, 0, 0.2);
@@ -185,9 +189,8 @@ p {
     align-items: center;
     p {
       margin: 0 5px;
-      border-radius: 23px; /* Ajusta el valor según el grado de redondeo que desees */
-      /* Otros estilos para el párrafo */
-      background-color: $color-background; /* Ejemplo de fondo de color */
+      border-radius: 23px;
+      background-color: $color-background;
       padding: 10px;
     }
   }
@@ -216,14 +219,14 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold; /* Agrega negrita para hacer que el texto sea más destacado */
-    cursor: pointer; /* Cambia el cursor al puntero al pasar por encima para indicar que son clickeables */
-    border: 2px solid transparent; /* Añade un borde transparente por defecto */
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid transparent;
     transition: background-color 0.3s ease;
   }
   .btnl {
     background-color: #fbd85d;
-    color: #fff;
+    color: $color-default;
   }
   .btnr {
     background-color: #383838;
@@ -285,4 +288,63 @@ p {
   .modal-content__left {
     height: 242px;
   }
+}
+
+// footer
+
+.footer {
+  width: 96%;
+  background-color: $color-default;
+  color: #383838;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 2% 0;
+  border-bottom: 2px solid $color-background;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo {
+  img {
+    max-width: 150px;
+  }
+}
+
+.footer-links {
+  ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.footer-links {
+  li {
+    margin: 0px 10px 10px;
+  }
+}
+
+.footer-links  {
+  margin-left: 157px;
+}
+
+.under-footer{
+  text-align: center;
+  padding: 10px 0;
+  background-color: $color-default;
+  color: $color-main;
 }

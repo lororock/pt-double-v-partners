@@ -1,5 +1,6 @@
-@charset "UTF-8";
 body {
+  margin: 0;
+  padding: 0;
   background: #f0f0f0;
 }
 
@@ -36,6 +37,7 @@ p {
 }
 
 .movie-card {
+  background-color: #fff;
   position: relative;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -185,9 +187,8 @@ p {
 }
 .content-right__info div p {
   margin: 0 5px;
-  border-radius: 23px; /* Ajusta el valor según el grado de redondeo que desees */
-  /* Otros estilos para el párrafo */
-  background-color: #f0f0f0; /* Ejemplo de fondo de color */
+  border-radius: 23px;
+  background-color: #f0f0f0;
   padding: 10px;
 }
 
@@ -217,9 +218,9 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold; /* Agrega negrita para hacer que el texto sea más destacado */
-  cursor: pointer; /* Cambia el cursor al puntero al pasar por encima para indicar que son clickeables */
-  border: 2px solid transparent; /* Añade un borde transparente por defecto */
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
   transition: background-color 0.3s ease;
 }
 .btns .btnl {
@@ -283,6 +284,56 @@ p {
   .modal-content__left {
     height: 242px;
   }
+}
+.footer {
+  width: 96%;
+  background-color: #fff;
+  color: #383838;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 2% 0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-logo img {
+  max-width: 150px;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0px 10px 10px;
+}
+
+.footer-links {
+  margin-left: 157px;
+}
+
+.under-footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #fff;
+  color: #fbd85d;
 }
 
 /*# sourceMappingURL=styles.css.map */

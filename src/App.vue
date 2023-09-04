@@ -1,15 +1,13 @@
 <script setup>
 import MovieList from './components/MovieList.vue'
+import Footer from './components/Footer.vue'
+
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    
   </div>
-  <MovieList msg="Vite + Vue" />
+  <MovieList />
+  <Footer/>
 </template>
