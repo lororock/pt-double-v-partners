@@ -41,10 +41,10 @@ const getGenres = (genreIds) => {
     <div class="filters">
       <div class="filter-contain">
         <div class="filter-select">IN THEATERS</div>
-        <div>COMING SOON</div>
-        <div>CHARTS</div>
-        <div>TV SERIES</div>
-        <div>TRAILERS</div>
+        <div class="filter-statik">COMING SOON</div>
+        <div class="filter-statik">CHARTS</div>
+        <div class="filter-statik">TV SERIES</div>
+        <div class="filter-statik">TRAILERS</div>
         <div class="filter-more">MORE ↓</div>
         <div class="filter-score">⭐ 179</div>
       </div>

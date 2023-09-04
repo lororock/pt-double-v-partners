@@ -70,6 +70,14 @@ p {
   width: 625px;
 }
 
+@media (max-width: 768px) {
+  .filter-contain .filter-statik {
+    display: none;
+  }
+  .filter-ranking input {
+    width: 80%;
+  }
+}
 .movie-card-container {
   display: flex;
   flex: 0 0 calc(25.33% - 20px);
