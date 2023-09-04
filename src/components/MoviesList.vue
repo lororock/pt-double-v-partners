@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { getMovies, getGenders } from "../services/getData.js";
-import Modal from "./Modal.vue";
+import Modal from "./Modal.vue"
 
 const moviesData = ref(null);
 const genders = ref(null);
@@ -20,11 +20,9 @@ onMounted(async () => {
 const openModal = (movie) => {
   selectedMovie.value = movie;
   isModalOpen.value = true;
-  console.log("click", selectedMovie.value.backdrop_path);
 };
 const closeModal = () => {
   isModalOpen.value = false;
-  console.log("click", isModalOpen.value);
 };
 
 const getGenres = (genreIds) => {
@@ -41,9 +39,7 @@ const getGenres = (genreIds) => {
 <template>
   <div>
     <div class="card">
-      <!-- Verifica si moviesData y moviesData.results no son nulos o indefinidos -->
       <div v-if="moviesData && moviesData.results">
-        <!-- Contenido que se mostrará si moviesData.results existe -->
         <div class="movie-card-container">
           <div
             class="movie-card"
@@ -69,9 +65,8 @@ const getGenres = (genreIds) => {
           </div>
         </div>
       </div>
-      <div v-else>
-        <!-- Contenido que se mostrará si moviesData.results es nulo o indefinido -->
-        <p>No se encontraron resultados de películas.</p>
+      <div class="spinner-container" v-else>
+        <div class="spinner"></div>
       </div>
       <div class="modal" v-if="isModalOpen">
         <Modal

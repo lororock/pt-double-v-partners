@@ -3,7 +3,6 @@
     <div class="footer">
       <div class="footer-content">
         <div class="footer-logo">
-          <!-- Coloca tu logo o contenido del logo aquí -->
           <img
             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEklEQVR4nO2XT0tWQRTGf6IuklZtXIhafoFIXKSuX9v2DQIXQQWtElq4cCEItWuhSRtxKRhZtMiFBH2CQKtN/kuDWiRKaOVrE0fOhXG4f6U376XzwLM4Z547c87MnJk7YDAYDAaDwWAQXASmgU9AHXAlY11je6yxnsAQsFeCIF1OSqy1KPhLFQveKXeBbnTbuIpyCt1XrqLcIKVgj4AXwKrav4GXwFqCXtpfaafR9890hWeAReB7jnFcAUrsiY1PtEY61ZYgBBeAdzH6W9reE3zv4xwwAhykjOMKMrFhzBs4tKV4tj3teBBoqA8xCOwnjPNPEhBc1pNAVqYpI4EPwBxwxfPdjtFNK+eBrUYngAbUGuNPmtlfwFX1tQCfU1aqGbgD/GxEAtdj9va1HAkIX3v+2YytJhhuRAKyfwe8mXqaoff7lW0XYSLQfVS+AfrUJ9tz+W8nIPY34D7wPKc+4lvPP5Wie+/5HzUigdPqb3j+lRTdV8//oAwJfNGTx/+BdAn9/ggSXTrrBDo4iXZgPUbXo2zzfAN6yxdOQJZNcF7th4GdpY/sEP1aqOF3cegNLsxCCewA94AFzx7xijaPXuybylE9QsPZ3Al0wrt68R1mBH+cQBlfX67Iz9xmCQJxp6TU0fEb01WUk+gDuapPyq6o2mvqqFLwtfDI6tarfaOkhV3X2Cb9mTcYDAaDwWD4n/EHpLZy6tEGavcAAAAASUVORK5CYII="
           />
@@ -12,7 +11,6 @@
 
       <div class="footer-content">
         <div class="footer-links">
-          <!-- Enlaces de navegación del footer -->
           <ul>
             <li>
               <a href="https://twitter.com/l0r0r0ck" target="_blank"
