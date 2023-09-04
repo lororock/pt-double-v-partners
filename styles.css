@@ -355,5 +355,11 @@ p {
     display: none;
   }
 }
+.img-header {
+  height: 660px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+}
 
 /*# sourceMappingURL=styles.css.map */

@@ -14,5 +14,13 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div>hola mundo</div>
+  <div
+    class="img-header"
+    v-if="movieData"
+    :style="{
+      backgroundImage: `url('https://image.tmdb.org/t/p/original${movieData.backdrop_path}')`,
+    }"
+  >
+    hola mundo
+  </div>
 </template>
