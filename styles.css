@@ -321,6 +321,11 @@ p {
   margin: 0;
 }
 
+.footer-info {
+  display: flex;
+  align-items: center;
+}
+
 .footer-links li {
   margin: 0px 10px 10px;
 }
@@ -334,6 +339,21 @@ p {
   padding: 10px 0;
   background-color: #fff;
   color: #fbd85d;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center;
+  }
+  .footer-logo img {
+    display: none;
+  }
+  .footer-links {
+    margin: 0;
+  }
+  .footer-info {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

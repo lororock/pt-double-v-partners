@@ -332,19 +332,41 @@ p {
   }
 }
 
+.footer-info {
+  display: flex;
+  align-items: center;
+}
+
 .footer-links {
   li {
     margin: 0px 10px 10px;
   }
 }
 
-.footer-links  {
+.footer-links {
   margin-left: 157px;
 }
 
-.under-footer{
+.under-footer {
   text-align: center;
   padding: 10px 0;
   background-color: $color-default;
   color: $color-main;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    justify-content: center;
+  }
+  .footer-logo {
+    img {
+      display: none;
+    }
+  }
+  .footer-links {
+    margin: 0;
+  }
+  .footer-info {
+    display: none;
+  }
 }

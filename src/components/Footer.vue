@@ -15,7 +15,8 @@
           <!-- Enlaces de navegación del footer -->
           <ul>
             <li>
-              <a href="/"
+              <a href="https://twitter.com/l0r0r0ck"
+              target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -30,7 +31,7 @@
               ></a>
             </li>
             <li>
-              <a href="/acerca"
+              <a href="https://www.doublevpartners.com/" target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -45,7 +46,7 @@
               ></a>
             </li>
             <li>
-              <a href="/contacto"
+              <a href="https://www.instagram.com/doublevpartners/" target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   x="0px"
@@ -62,10 +63,8 @@
           </ul>
         </div>
       </div>
-      <div class="footer-content">1990-2015 IMDB.COM, ING.</div>
+      <div class="footer-info">1990-2015 IMDB.COM, ING.</div>
     </div>
-    <div class="under-footer">
-      SHOW MENU
-    </div>
+    <div class="under-footer">SHOW MENU</div>
   </footer>
 </template>
