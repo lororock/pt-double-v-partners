@@ -1,5 +1,6 @@
 $color-main: #fbd85d;
 $color-background: #f0f0f0;
+$color-info: #64ccc5;
 
 body {
   background: $color-background;
@@ -13,6 +14,14 @@ h5 {
 
 h4 {
   margin: 10px 0px;
+}
+
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
 }
 
 .card {
@@ -104,7 +113,7 @@ h4 {
 .modal-content {
   position: relative;
   top: 20%;
-  width: 60%;
+  width: 50%;
   left: 20%;
   background-color: #fff;
   border-radius: 5px;
@@ -114,7 +123,8 @@ h4 {
 
 .modal-content__data {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  background-color: $color-background;
 }
 
 .modal-content__left {
@@ -126,15 +136,98 @@ h4 {
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
+  }
+  .movie-card__img2 {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: none;
   }
 }
 
 .modal-content__right {
-  width: 60%;
+  width: 70%;
   height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
 }
 
+.full-movie {
+  margin-top: 15%;
+  color: $color-info;
+}
+
+.right-info__movie {
+  display: flex;
+  justify-content: space-around;
+  padding: 3%;
+  border-bottom: 2px solid $color-background;
+}
+
+.content-right__info {
+  text-align: left;
+  padding-left: 3%;
+  margin-top: 3%;
+  background-color: #fff;
+  position: relative;
+  right: 12%;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2), 0px -5px 10px rgba(0, 0, 0, 0.2);
+  b {
+    color: $color-info;
+  }
+  div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    p {
+      margin: 0 5px;
+      border-radius: 23px; /* Ajusta el valor según el grado de redondeo que desees */
+      /* Otros estilos para el párrafo */
+      background-color: $color-background; /* Ejemplo de fondo de color */
+      padding: 10px;
+    }
+  }
+}
+.content-right__top {
+  padding: 5%;
+}
+.right-info__details {
+  display: flex;
+  justify-content: space-around;
+  margin: 3%;
+  font-size: 16px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  div {
+    flex: 1;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* Agrega negrita para hacer que el texto sea más destacado */
+    cursor: pointer; /* Cambia el cursor al puntero al pasar por encima para indicar que son clickeables */
+    border: 2px solid transparent; /* Añade un borde transparente por defecto */
+    transition: background-color 0.3s ease;
+  }
+  .btnl {
+    background-color: #fbd85d;
+    color: #fff;
+  }
+  .btnr {
+    background-color: #383838;
+  }
+}
 .close {
   position: absolute;
   top: 10px;
@@ -143,14 +236,50 @@ h4 {
   cursor: pointer;
 }
 
+@media (max-width: 1024px) {
+  .modal-content__data {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .modal-content {
+    top: 1%;
+    left: 17%;
+    width: 70%;
+  }
+
+  .modal-content__right{
+    width: 100%;
+    text-align: center;
+  }
+  .content-right__top{
+    padding: 0 5%;
+  }
+  .content-right__info{
+    padding-top: 1%;
+    right: 0;
+    bottom: 59px;
+  }
+
+  .full-movie{
+    margin: 5% 0;
+  }
+  .modal-content__left {
+    height: 400px;
+    img {
+      display: none;
+      visibility: hidden;
+    }
+    .movie-card__img2 {
+      display: block;
+      visibility: visible;
+    }
+  }
+  
+}
+
 @media (max-width: 768px) {
   .modal-content {
     width: 90%;
     left: 5%;
   }
 }
-// @media (max-width: 425px) {
-//   .modal-content {
-//     left: 0%;
-//   }
-// }
