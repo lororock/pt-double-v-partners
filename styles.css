@@ -27,6 +27,49 @@ p {
   background-color: #f0f0f0;
 }
 
+.filters {
+  position: relative;
+  bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.filter-contain {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #383838;
+}
+.filter-contain div {
+  margin-right: 30px;
+}
+.filter-contain .filter-select {
+  color: #ffc436;
+  margin-left: 11px;
+}
+.filter-contain .filter-score {
+  color: #fff;
+  display: flex;
+  background-color: #ffc436;
+  margin: 11px;
+  width: 70px;
+  height: 43px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.filter-ranking {
+  display: flex;
+  margin-top: 2%;
+}
+.filter-ranking input {
+  width: 625px;
+}
+
 .movie-card-container {
   display: flex;
   flex: 0 0 calc(25.33% - 20px);
@@ -39,7 +82,6 @@ p {
 .movie-card {
   background-color: #fff;
   position: relative;
-  border: 1px solid #ffc436;
   border-radius: 5px;
   margin: 0px 10px 0px 10px;
   margin-bottom: 20px;
