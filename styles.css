@@ -70,6 +70,11 @@ p {
   width: 625px;
 }
 
+@media (max-width: 534px) {
+  .filters {
+    position: static;
+  }
+}
 @media (max-width: 768px) {
   .filter-contain .filter-statik {
     display: none;
