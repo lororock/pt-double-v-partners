@@ -7,6 +7,8 @@ const moviesData = ref(null);
 const genders = ref(null);
 const isModalOpen = ref(false);
 const selectedMovie = ref(null);
+const moreLoading = ref(6);
+const lengthMovies = ref(6);
 
 onMounted(async () => {
   try {
@@ -33,6 +35,12 @@ const getGenres = (genreIds) => {
     return genre ? genre.name : "";
   });
   return genres.join(", ");
+};
+
+const addMoviesList = () => {
+  lengthMovies.value = moviesData.value.results.length;
+  moreLoading.value = moreLoading.value + 6;
+  console.log(moreLoading.value, lengthMovies.value);
 };
 </script>
 
@@ -77,7 +85,7 @@ const getGenres = (genreIds) => {
           <circle cx="50" cy="75" r="5" fill="#000" />
           <circle cx="75" cy="75" r="5" fill="#000" />
         </svg>
-        <input type="range" >
+        <input type="range" />
       </div>
     </div>
     <div class="card">
@@ -85,7 +93,7 @@ const getGenres = (genreIds) => {
         <div class="movie-card-container">
           <div
             class="movie-card"
-            v-for="movie in moviesData.results"
+            v-for="movie in moviesData.results.slice(0, moreLoading)"
             :key="movie.id"
           >
             <img
@@ -118,6 +126,21 @@ const getGenres = (genreIds) => {
           :closeModal="closeModal"
         />
       </div>
+    </div>
+    <div class="more-loading" v-if="moreLoading <= lengthMovies">
+      <button @click="addMoviesList">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="10" cy="10" r="2" fill="#fff" />
+          <circle cx="5" cy="10" r="2" fill="#fff" />
+          <circle cx="15" cy="10" r="2" fill="#fff" />
+        </svg>
+      </button>
     </div>
   </div>
 </template>

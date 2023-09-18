@@ -441,7 +441,6 @@ p {
   height: 660px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
 }
 
 .header-navbar {
@@ -548,6 +547,20 @@ p {
     height: 50px;
     border-radius: 50%;
   }
+}
+.more-loading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.more-loading button {
+  padding: 13px;
+  border-radius: 100%;
+  background-color: #ffc436;
+  font-size: 7px;
+  color: black;
+  display: flex;
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -77,11 +77,10 @@ p {
 }
 
 @media (max-width: 534px) {
-  .filters{
+  .filters {
     position: static;
   }
 }
-
 
 @media (max-width: 768px) {
   .filter-contain {
@@ -90,7 +89,6 @@ p {
     }
   }
   .filter-ranking {
-
     input {
       width: 80%;
     }
@@ -466,7 +464,7 @@ p {
   height: 660px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  //background-position: center;
 }
 
 .header-navbar {
@@ -575,5 +573,21 @@ p {
       height: 50px;
       border-radius: 50%;
     }
+  }
+}
+
+.more-loading {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  button {
+    padding: 13px;
+    border-radius: 100%;
+    background-color: $color-main;
+    font-size: 7px;
+    color: black;
+    display: flex;
+    border: none;
   }
 }
