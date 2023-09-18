@@ -160,6 +160,7 @@ p {
   }
 }
 .modal {
+  display: flex;
   position: fixed;
   top: 0%;
   left: 0%;
@@ -172,14 +173,13 @@ p {
 }
 
 .modal-content {
-  position: relative;
-  top: 20%;
+  border-radius: 5%;
   width: 50%;
-  left: 20%;
   background-color: #fff;
   border-radius: 5px;
   text-align: center;
   display: inline-block;
+  transition: box-shadow 0.1s, transform 2.1s;
 }
 
 .modal-content__data {

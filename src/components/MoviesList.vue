@@ -11,6 +11,7 @@ const moreLoading = ref(6);
 const lengthMovies = ref(6);
 
 onMounted(async () => {
+  document.addEventListener("keydown", handleKeyDown);
   try {
     moviesData.value = await getMovies();
     genders.value = await getGenders();
@@ -27,6 +28,11 @@ const closeModal = () => {
   isModalOpen.value = false;
 };
 
+const handleKeyDown = (event) => {
+  if (event.key === "Escape" && isModalOpen.value) {
+    closeModal();
+  }
+};
 const getGenres = (genreIds) => {
   const genres = genreIds.map((genreId) => {
     const genre =
@@ -40,7 +46,6 @@ const getGenres = (genreIds) => {
 const addMoviesList = () => {
   lengthMovies.value = moviesData.value.results.length;
   moreLoading.value = moreLoading.value + 6;
-  console.log(moreLoading.value, lengthMovies.value);
 };
 </script>
 

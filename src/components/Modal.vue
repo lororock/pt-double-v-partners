@@ -1,14 +1,53 @@
 <script setup>
+import { ref } from "vue";
+
+const posterRef = ref(null);
+
 const { isModalOpen, selectedMovie, getGenres, closeModal } = defineProps([
   "isModalOpen",
   "selectedMovie",
   "getGenres",
   "closeModal",
 ]);
+
+const handleMouseMove = (evt) => {
+  const el = posterRef.value;
+  if (el) {
+    const { clientWidth: width, clientHeight: height } = el;
+    const { layerX, layerY } = evt;
+    const yRotation = ((layerX - width / 2) / width) * 20;
+    const xRotation = ((layerY - height / 2) / height) * 20;
+    const transformString = `
+          perspective(500px)  
+          scale(1.1)
+          rotateX(${xRotation}deg)
+          rotateY(${yRotation}deg)
+        `;
+
+    el.style.transform = transformString;
+  }
+};
+
+const handleMouseOut = () => {
+  const el = posterRef.value;
+  if (el) {
+    el.style.transform = `
+          perspective(500px)
+          scale(1)
+          rotateX(0deg)
+          rotateY(0deg)
+        `;
+  }
+};
 </script>
 
 <template>
-  <div class="modal-content">
+  <div
+    class="modal-content"
+    ref="posterRef"
+    @mousemove="handleMouseMove"
+    @mouseout="handleMouseOut"
+  >
     <span @click="closeModal()" class="close">&times;</span>
     <div class="modal-content__data">
       <div class="modal-content__left">
